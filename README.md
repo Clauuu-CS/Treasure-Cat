@@ -2,16 +2,16 @@
 by Clàudia Sallés
 
 ## :pencil: Description:
+This project is a game used to experiment with the possibilities that the Ren'Py framework allows. It follows the structure of a visual novel, with various endings depending on the options chosen. It experiments with the use of backgrounds, different states of a character and story stucture. 
 
 ## :woman_student: Things I leaned:
-- Overall understanding of the renpy framework.
+- Overall understanding of the Ren'Py framework.
 - How to create and jump to different scenarios with the label function.
 - How to create a script with various caracters that have a defined text.
 - Displayment of images and backgrouds, along with a variety of effects for transitioning.
-- 
 
 ## :woman_teacher: Things I can teach: 
-- **Opening and closing eye effect:** The use of two different background to create the effect of the user opening and closing their eyes, as if they were waking up or going to sleep.
+- **Opening and closing eye effect:** The use of two different backgrounds to create the effect of the user opening and closing their eyes, as if they were waking up or going to sleep.
 ```
 scene bg eye with fade      ## bg eye: a black shape of an eye half closed with the character already begind it.
 scene bg black with fade    ## bg black: completely black backgroud that simulates fully closed eyes.
@@ -77,6 +77,7 @@ label start:
 ### Code tutorials and forums:
 - [Displaying images](https://www.renpy.org/doc/html/displaying_images.html)
 - [Numbers as Variables in a Text](https://www.renpy.org/wiki/renpy/doc/reference/Text#Interpolation)
+- Ren'Py tutorial (how to operate text and images)
 
 ### Audio:
 (None used yet)
