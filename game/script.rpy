@@ -1,6 +1,6 @@
 
 define c = Character("Cat", color="bc92e1")
-define m = Character("Me", color="a461de")
+define m = Character("Me", color="00e68a")
 
 ## $ counter = int(1)
 $ right = True
