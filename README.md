@@ -3,7 +3,12 @@ by Clàudia Sallés
 
 ## :pencil: Description:
 
-## :woman_student: Things I leant:
+## :woman_student: Things I leaned:
+- Overall understanding of the renpy framework.
+- How to create and jump to different scenarios with the label function.
+- How to create a script with various caracters that have a defined text.
+- Displayment of images and backgrouds, along with a variety of effects for transitioning.
+- 
 
 ## :woman_teacher: Things I can teach: 
 - **Opening and closing eye effect:** The use of two different background to create the effect of the user opening and closing their eyes, as if they were waking up or going to sleep.
