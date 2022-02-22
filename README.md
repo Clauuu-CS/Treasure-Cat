@@ -12,7 +12,7 @@ This project is a game used to experiment with the possibilities that the Ren'Py
 
 ## :woman_teacher: Things I can teach: 
 - **Opening and closing eye effect:** The use of two different backgrounds to create the effect of the user opening and closing their eyes, as if they were waking up or going to sleep.
-```
+```Python
 scene bg eye with fade      ## bg eye: a black shape of an eye half closed with the character already begind it.
 scene bg black with fade    ## bg black: completely black backgroud that simulates fully closed eyes.
 
@@ -23,7 +23,7 @@ scene bg black with fade
 ```
 
 - **Method to have a non-instant response after a question:** Through this method the user has no information about what question they answered correctly or incorrectly, forcing them to have to repeat a certain phase until all the choices they pick are the good answer. It gets only one of the questions to be answered wrong for the conditional that leads to the wrong_answer ending to be triggered.
-```
+```Python
 label start:
   $ wrong = False ## Variable "wrong" is reseted every time the phase starts to prevent any previous errors to influence the current run.
   $ right = True
