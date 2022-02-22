@@ -2,7 +2,7 @@
 define c = Character("Cat", color="bc92e1")
 define m = Character("Me", color="a461de")
 
-## counter = int(1)
+## $ counter = int(1)
 $ right = True
 
 label start:
@@ -54,14 +54,17 @@ label start:
         "No, thank you.":
             jump bad_ending
         "Ok.":
-            jump continuation_1
+            jump continuation_0
 
-label continuation_1:
+label continuation_0:
     show cat happy
     c "Great! Now follow me."
     hide cat normal with fade
     scene bg land with fade
     pause 2
+
+label continuation_1:
+    $ wrong = False
     show cat normal
     c "Ok, so first question:"
     c "How many toes do you think I have?"
@@ -97,12 +100,53 @@ label continuation_1:
             ## right answer
             $ right = True
     c "Ok. Next question!"
-    return
+    show cat hid
+    c "Where am I hidden?"
+    menu:
+        "Space":
+            $ wrong = True
+        "Nowhere":
+            $ wrong = True
+        "Behind the bush":
+            $ right = True
+        "Behind the tree":
+            $ wrong = True
+        "Underground":
+            ## right answer
+            $ wrong = True
 
+    if wrong == True:
+        jump wrong_answer
 
+    if wrong == False:
+        jump good_answer
 
+label wrong_answer:
+    show cat normal
+    c "Ok... It seems you have made a mistake at some point."
+    c "I'm afraid I can't give you your tresure back."
+    c "I'm feeling generous today, so would you like to try again?"
+    
+    menu:
+        "No, thank you.":
+            jump bad_ending
+        "Ok.":
+            jump continuation_1
 
-
+label good_answer:
+    show cat happy
+    c "YEY! You have answered all my questions right!"
+    c "I'm happy to say that you have gained the right to recieve your tresure."
+    c "Here you have..."
+    scene bg eye with fade
+    scene bg black with fade
+    scene bg eye with fade
+    scene bg black with fade
+    "You suddenly wake up in your bed. It is a bright day in the morning, and your alarm clock has just started rigning."
+    "You look at the end of the bed and see your cat Shadow snuggled up and sleeping."
+    m "Well...that was a strage dream..."
+    "THE END"
+    return 
 
 label bad_ending:
     show cat normal
@@ -115,7 +159,7 @@ label bad_ending:
     "You have played \"counter\"times. Do you want to keep playing?"
     menu:
         "Yes":
-            ## counter = counter + 1
+            ## $ counter = counter + 1
             scene bg eye_room_night with fade
             scene bg black with fade
             m "I feel so sleepy..."
